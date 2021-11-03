@@ -19,6 +19,8 @@ function isValidTriangle(a, b, c) {
     from 0º and you drawing the third side. What's the largest this third side
     could ever be?
   */
+ //found valid triangle explaination here: https://www.techcrashcourse.com/2015/11/c-program-to-check-whether-triangle-is-valid-or-not-given-sides.html#:~:text=A%20triangle%20is%20a%20valid,and%20C%20%2B%20A%20%3E%20B.
+ return((a + b > c) && (a + c > b) && (b + c > a))
 }
 
 if (require.main === module) {
