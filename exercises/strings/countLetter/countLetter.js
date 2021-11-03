@@ -22,7 +22,10 @@
  */
 
 function countLetter(string, letter) {
-  // This is your job. :)
+  //got replaceAll syntax from here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll
+  let newString = string.toLowerCase().replaceAll(letter.toLowerCase(), '');
+  console.log(`There are ${string.length - newString.length} ${letter}'s in "${string}"`);
+  return(string.length - newString.length);
 }
 
 if (require.main === module) {
@@ -30,6 +33,10 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+  countLetter('hello', 'L'); // => 2
+  countLetter('Mississippi', 's'); // => 4
+  countLetter('Mississippi', 'x'); // => 0
+  countLetter('Mississippi', 'm');
 }
 
 module.exports = countLetter;
