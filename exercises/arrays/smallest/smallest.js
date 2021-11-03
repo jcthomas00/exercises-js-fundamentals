@@ -16,15 +16,15 @@ function smallest(array) {
   // Replace each _____ with some code (not all blanks) will
   // use the same code.
 
-  let _____ = _____;
+  let smallestNow = array[0];
 
-  for (let _____ of _____) {
-    if (_____) {
-      _____ = _____;
+  for (let element of array) {
+    if (element < smallestNow) {
+      smallestNow = element;
     }
   }
 
-  return _____;
+  return smallestNow;
 }
 
 if (require.main === module) {
