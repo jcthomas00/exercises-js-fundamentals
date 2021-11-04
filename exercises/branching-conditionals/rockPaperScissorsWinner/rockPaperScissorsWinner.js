@@ -26,6 +26,14 @@
  */
 function rockPaperScissorsWinner(array) {
   // This is your job. :)
+  const WINNERS = "[0,1][1,2][2,0]";
+  
+  if(array[0] === array[1]){
+    return "draw"
+  } else if(WINNERS.indexOf(array+'')>0){
+    return "win"
+  }
+  return "loss";
 }
 
 if (require.main === module) {
@@ -33,6 +41,10 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+  console.log(rockPaperScissorsWinner([0, 1 ])); // => 'win' (scissors beats paper)
+  console.log(rockPaperScissorsWinner([1, 0])); // => 'lose' (paper loses to scissors)
+  console.log(rockPaperScissorsWinner([1, 2])); // => 'win' (paper beats rock)
+  console.log(rockPaperScissorsWinner([2, 2])); // => 'draw' (both players played rock)
 }
 
 module.exports = rockPaperScissorsWinner;
