@@ -27,6 +27,7 @@
 function rockPaperScissorsWinner(array) {
   // This is your job. :)
   const WINNERS = "[0,1][1,2][2,0]";
+  
   if(array[0] === array[1]){
     return "draw"
   } else if(WINNERS.indexOf(array+'')>0){

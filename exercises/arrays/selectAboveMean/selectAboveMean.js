@@ -19,6 +19,7 @@ function selectAboveMean(array) {
 
   //looked up reduce function here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
   const mean = array.reduce((prevVal,current) => prevVal + current)/array.length;
+
   let aboveArray = array.filter((val) => val > mean)
   
   console.log(`\nThe original array: [${array}]`);
